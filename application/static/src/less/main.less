@@ -6,7 +6,20 @@ body, html {
 
   .demo {
     text-align: center;
-    padding: 80px;
+    padding: 100px 80px;
+    background: #4181e4;
+    color: white;
+
+    #logo {
+      width: 350px;
+      margin: 0 auto;
+    }
+
+    p {
+      margin: 10px auto 40px;
+      width: 350px;
+      text-align: center;
+    }
 
     .alert {
       max-width: 638px;
@@ -63,7 +76,7 @@ body, html {
 
       #submit {
         color: white;
-        background: #4182e4;
+        background: #55bfa1;
         transition: all .2s ease-out;
         border: 0;
             border-radius: 0 3px 3px 0;
@@ -78,8 +91,25 @@ body, html {
 
     .response {
       width: 670px;
-      margin: 30px auto 0;
-      font-family: 'Roboto Mono', monospace;
+      margin: 0 auto;
+
+      pre {
+        margin: 0;
+
+        code {
+          display: none;
+          font-family: 'Roboto Mono', monospace;
+          white-space: pre-wrap;
+          text-align: left;
+          padding: 10px;
+          border-radius: 3px;
+          width: -webkit-fill-available;
+          overflow-x: hidden;
+          font-size: .8em;
+        }
+
+      }
+
     }
   }
 }

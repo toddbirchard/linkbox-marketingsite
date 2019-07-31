@@ -3,6 +3,11 @@
 {% block content %}
 
 <div class="demo">
+
+
+  <img id="logo" alt="Linkbox Logo" src="{{ url_for('static', filename='img/linkbox-logo-white.png') }}">
+  <p>Linkbox: The API for generating link previews.</p>
+
   {% for message in get_flashed_messages() %}
   <div class="alert alert-warning">
     <button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -15,8 +20,10 @@
     <input id="submit" type="submit" value="Submit">
   </form>
 
-  <div class="response">
-    {{ response }}
+  <div class="response" id="code">
+    <pre>
+      <code class="language-json hljs">{{ response }}</code>
+    </pre>
   </div>
 </div>
 {% endblock %}

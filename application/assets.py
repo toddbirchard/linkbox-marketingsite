@@ -21,4 +21,4 @@ def compile_assets(app):
     # Build assets in development mode
     if app.config['FLASK_ENV'] == 'development':
         less_bundle.build()
-        # js_bundle.build()
+        js_bundle.build()

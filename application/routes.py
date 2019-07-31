@@ -12,7 +12,6 @@ landing_bp = Blueprint('landing_bp', __name__)
 def homepage():
     """Serve homepage."""
     form = URLForm(request.form)
-    print('request = ', request.method)
     if request.method == 'POST':
         if form.validate():
             params = {
