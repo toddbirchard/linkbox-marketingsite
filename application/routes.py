@@ -14,9 +14,11 @@ def homepage():
     form = URLForm(request.form)
     if request.method == 'POST':
         if form.validate():
-            params = {
-                'url': request.form.get('url')
-            }
+            url = request.form.get('url')
+            if 'http' not in url:
+                url = 'http://' + url
+            print('-----------', url)
+            params = {'url': url}
             req = requests.get('https://us-east1-hackersandslackers-204807.cloudfunctions.net/linkbox-api', params=params)
             response = json.loads(req.text)
             response = json.dumps(response, indent=2)

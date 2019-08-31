@@ -16,7 +16,7 @@
   {% endfor %}
 
   <form method="post" action="{{ url_for('landing_bp.homepage') }}">
-    {{ form.url }}
+    {{ form.url(placeholder='enter something here') }}
     <input id="submit" type="submit" value="Submit">
   </form>
 
