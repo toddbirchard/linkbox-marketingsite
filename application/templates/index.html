@@ -3,7 +3,7 @@
 {% block content %}
 
 <div class="demo">
-
+  <div class="demo-preview">
 
   <img id="logo" alt="Linkbox Logo" src="{{ url_for('static', filename='img/linkbox-logo-white.png') }}">
   <p>Linkbox: The API for generating link previews.</p>
@@ -25,5 +25,6 @@
       <code class="language-json hljs">{{ response }}</code>
     </pre>
   </div>
+</div>
 </div>
 {% endblock %}
