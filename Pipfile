@@ -9,13 +9,12 @@ Flask = "*"
 Flask-WTF = "*"
 Flask-Assets = "*"
 WTForms = "*"
-Gunicorn = "*"
+Python-Dotenv = "*"
 
 [dev-packages]
-Python-Dotenv = "*"
 Lesscpy = "*"
 CSSMin = "*"
 JSMin = "*"
 
 [requires]
-python_version = "3.7"
+python_version = "3.8"

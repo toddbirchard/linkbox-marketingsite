@@ -5,10 +5,10 @@ html {
   font-family: 'Open Sans', sans-serif;
 
   .demo {
-    text-align: center;
     padding: 120px 0;
     background: #4181e4;
     color: white;
+    text-align: center;
 
     .demo-preview {
       width: 671px;
@@ -22,34 +22,34 @@ html {
     }
 
     p {
-      margin: 10px auto 60px;
       width: 350px;
+      margin: 10px auto 60px;
       text-align: center;
     }
 
     .alert {
-      max-width: 638px;
-      font-weight: 300;
-      font-size: 0.8em;
-      margin: 30px auto;
-      padding: 15px;
-      border-radius: 2px;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      max-width: 638px;
+      margin: 30px auto;
+      padding: 15px;
+      border-radius: 2px;
+      font-size: 0.8em;
+      font-weight: 300;
 
       &.alert-warning {
-        color: #856404;
-        background-color: #fff3cd;
         border-color: #ffeeba;
+        background-color: #fff3cd;
+        color: #856404;
       }
 
       button {
-        color: #856404;
-        outline: none;
         -webkit-appearance: none;
         border: none;
+        outline: none;
         background: none;
+        color: #856404;
         font-size: 1.5em;
         transition: all 0.2s ease-out;
 
@@ -61,36 +61,54 @@ html {
     }
 
     form {
+      display: flex;
+      position: relative;
+      justify-content: space-between;
       width: 100%;
       margin: auto;
-      display: flex;
-      justify-content: space-between;
+
+      .prefix {
+        z-index: 100;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 20px;
+        height: fit-content;
+        margin: auto;
+        color: #979eb7;
+      }
+
+
 
       input {
-        padding: 15px;
-        font-family: 'Open Sans', sans-serif;
-        outline: none;
         -webkit-appearance: none;
+        padding: 15px;
+        outline: none;
+        font-family: 'Open Sans', sans-serif;
         font-size: 1em;
+
+        &[type="text"] {
+          padding: 15px 15px 15px 79px;
+        }
       }
 
       #url-field {
-        border: 1px solid #dedede;
         width: 100%;
+        border: 1px solid #dedede;
         border-radius: 3px 0 0 3px;
       }
 
       #submit {
-        color: white;
-        background: #55bfa1;
-        transition: all 0.2s ease-out;
         border: 0;
         border-radius: 0 3px 3px 0;
+        background: #55bfa1;
+        color: white;
+        transition: all 0.2s ease-out;
 
         &:hover {
-          cursor: pointer;
           background: white;
           color: #4182e4;
+          cursor: pointer;
         }
       }
     }
@@ -104,14 +122,14 @@ html {
 
         code {
           display: none;
-          font-family: 'Roboto Mono', monospace;
-          white-space: pre-wrap;
-          text-align: left;
-          padding: 10px;
-          border-radius: 3px;
           width: -webkit-fill-available;
+          padding: 10px;
           overflow-x: hidden;
+          border-radius: 3px;
+          font-family: 'Roboto Mono', monospace;
           font-size: 0.8em;
+          text-align: left;
+          white-space: pre-wrap;
         }
       }
     }
